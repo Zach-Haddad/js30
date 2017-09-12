@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+</head>
+<body>
+
+  <script>
+    // let age = 100;
+    // let age2 = age;
+    // console.log(age, age2);
+    // age = 200;
+    // console.log(age, age2);
+
+    // let name = 'Wes';
+    // let name2 = name;
+    // console.log(name, name2);
+    // name = 'wesley';
+    // console.log(name, name2);
+
+    // Let's say we have an array
+    const players = ['Zach', 'Jeff', 'John'];
+
+    // and we want to make a copy of it.
+    const team = players;
+
+    console.log(players, team);
+    // make copy
+    const team2 = players.slice();
+
+    // or use concat
+    const team3 = [].concat(players);
+
+    // or use  ES6 Spread
+    const team4 = [...players];
+    team4[3] = 'Jared';
+    console.log(team4);
+
+    // Array.from
+    const team5 = Array.from(players);
+
+    // with Objects
+    const person = {
+      name: 'Zach',
+      age: 26
+    };
+
+    // use Object.assign
+    const cap2 = Object.assign({}, person, { name: 'George', age: 12 });
+    console.log(cap2);
+
+  </script>
+
+</body>
+</html>
